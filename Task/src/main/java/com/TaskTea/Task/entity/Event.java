@@ -19,13 +19,13 @@ public class Event {
     private long id;
 
     @Column(nullable = false)
-    private String title;
+    private String eventName;
 
     @Column(nullable = false)
     private String description;
 
     @Column(nullable = false)
-    private boolean reminder_sent = false;
+    private boolean reminderSent = false;
 
     @Column
     private LocalDateTime eventDate;
@@ -39,7 +39,7 @@ public class Event {
     private LocalDateTime updatedAt;
 
     @ManyToOne
-    @JoinColumn(name="userId", nullable = false)
+    @JoinColumn(name="user_id", nullable = false)
     private User user;
 
     @Column
