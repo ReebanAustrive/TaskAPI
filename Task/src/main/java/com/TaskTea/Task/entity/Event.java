@@ -19,7 +19,7 @@ public class Event {
     private long id;
 
     @Column(nullable = false)
-    private String eventName;
+    private String title;
 
     @Column(nullable = false)
     private String description;

@@ -26,7 +26,7 @@ public class EventService {
 
         Event event = new Event();
         event.setUser(user);
-        event.setEventName(eventRequest.getEventName());
+        event.setTitle(eventRequest.getTitle());
         event.setDescription(eventRequest.getDescription());
         event.setEventDate(eventRequest.getEventDate());
         eventRepository.save(event);
@@ -50,7 +50,7 @@ public class EventService {
     public Event updateEvent(long eventId, EventRequest eventRequest) {
         Event event = eventRepository.findById(eventId)
                 .orElseThrow(() -> new RuntimeException("Event not found"));
-        event.setEventName(eventRequest.getEventName());
+        event.setTitle(eventRequest.getTitle());
         event.setDescription(eventRequest.getDescription());
         event.setEventDate(eventRequest.getEventDate());
         eventRepository.save(event);
