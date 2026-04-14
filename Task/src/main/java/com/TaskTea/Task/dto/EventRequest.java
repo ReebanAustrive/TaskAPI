@@ -1,6 +1,7 @@
 package com.TaskTea.Task.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,15 +10,15 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class EventRequest {
-    private long userId;
+    private Long userId;
 
     @NotBlank
-    private String eventName;
+    private String title;
 
     @NotBlank
     private String description;
 
-    @NotBlank
+    @NotNull
     private LocalDateTime eventDate;
 
 }
